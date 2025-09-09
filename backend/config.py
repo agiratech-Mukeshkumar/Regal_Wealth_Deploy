@@ -9,7 +9,8 @@ class Config:
         'host': os.environ.get('DB_HOST'),
         'user': os.environ.get('DB_USER'),
         'password': os.environ.get('DB_PASSWORD'),
-        'database': os.environ.get('DB_NAME')
+        'database': os.environ.get('DB_NAME'),
+        'port': int(os.environ.get('DB_PORT', 3306)) 
     }
     MAIL_SERVER = os.environ.get('MAIL_SERVER')
     MAIL_PORT = int(os.environ.get('MAIL_PORT', 587))
